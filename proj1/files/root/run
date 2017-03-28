@@ -1,0 +1,10 @@
+#!/bin/sh
+
+echo 'test1.c' > /dev/kmsg
+/root/test/test1
+echo 'test2.c' > /dev/kmsg
+/root/test/test2
+echo 'test3.c' > /dev/kmsg
+/root/test/test3
+dmesg 
+
