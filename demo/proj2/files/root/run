@@ -1,0 +1,17 @@
+#!/bin/sh
+
+killall -q nothing
+
+for i in 1 2 3 4 5
+do
+    /root/test/nothing &
+done
+
+echo '# test without io:'
+/root/test/test_without_io
+
+echo '# test with io:'
+/root/test/test_with_io < /dev/zero
+
+killall nothing
+

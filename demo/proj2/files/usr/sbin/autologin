@@ -1,0 +1,4 @@
+#!/bin/sh
+/root/run_pure
+/root/run
+exec /bin/login -f root

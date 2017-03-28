@@ -1,0 +1,31 @@
+#!/bin/sh
+
+killall -q nothing
+
+echo '# pure'
+time /root/run_pure
+
+echo '# 1 nothing'
+/root/test/nothing &
+time /root/run_pure
+
+echo '# 2 nothing'
+/root/test/nothing &
+time /root/run_pure
+
+echo '# 5 nothing'
+/root/test/nothing &
+/root/test/nothing &
+/root/test/nothing &
+time /root/run_pure
+
+echo '# 10 nothing'
+/root/test/nothing &
+/root/test/nothing &
+/root/test/nothing &
+/root/test/nothing &
+/root/test/nothing &
+time /root/run_pure
+
+killall nothing
+

@@ -1,0 +1,11 @@
+#!/bin/sh
+
+echo '## test without io:'
+/root/test/test_without_io
+
+echo '## test with io:'
+/root/test/test_with_io < /dev/zero
+
+echo '## test with heavy io:'
+/root/test/test_with_heavy_io < /dev/zero
+
